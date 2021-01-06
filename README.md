@@ -14,8 +14,7 @@ $ npm i bootstrap-icons
 Para clonar el repositorios, es necesario ejecutar lo siguiente:
 
 ```
-$ git clone https://github.com/clasesucatmarlon/gradiWEB.git
-``` 
+$ git clone https://github.com/clasesucatmarlon/gradiweb-test.git
 
 ## API de OpenWeather:
 Para el desarrollo de la aplicación se trabajó con la API proporcionada por OpenWeather.  Para ello se hizo uso de las siguientes rutas para extraer la información desde el archivo JSON de la misma.
