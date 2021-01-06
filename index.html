@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Estado del tiempo</title>
+    <meta name="title" content="Estado del tiempo">
+    <meta name="description"
+        content="Aplicación que muestra el estado del tiempo en Bogotá, Colombia / Lyon y Paris, Francia.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://timegradiweb1.herokuapp.com/">
+    <meta property="og:title" content="Estado del tiempo">
+    <meta property="og:description"
+        content="Aplicación que muestra el estado del tiempo en Bogotá, Colombia / Lyon y Paris, Francia.">
+    <meta property="og:image"
+        content="https://user-images.githubusercontent.com/60376045/103824547-255f5380-5042-11eb-953f-2f8dce1ea7bf.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://timegradiweb1.herokuapp.com/">
+    <meta property="twitter:title" content="Estado del tiempo">
+    <meta property="twitter:description"
+        content="Aplicación que muestra el estado del tiempo en Bogotá, Colombia / Lyon y Paris, Francia.">
+    <meta property="twitter:image"
+        content="https://user-images.githubusercontent.com/60376045/103824547-255f5380-5042-11eb-953f-2f8dce1ea7bf.jpg">
+
+
+
+    <title>Clima</title>
+
+    <!-- Styles of Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <!-- Styles owner -->
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="icon" href="./images/favicon.ico" type="image/png" />
+
+    <script src="./js/api.js"></script>
+
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row banner">
+            <div class="col-1 d-flex flex-column justify-content-center">
+
+                <div class="banner2-1 d-flex flex-column">
+                    <img id="mostrarImgTempBanner" src="#" alt="">
+                    <p id="mostrarEdoTiempo"></p>
+                </div>
+
+
+                <div class="banner2-2 d-flex flex-row">
+                    <h3 id="mostrarTempBanner"></h3>
+                    <h4 class="celsius">°C</h4>
+                </div>
+
+            </div>
+            <div class="col-11 banner2">
+                <h3 class="ciudad"><i class="bi bi-geo-alt-fill"></i> Bogotá</h3>
+                <img class="time-banner" src="./images/nubleado.png" alt="">
+            </div>
+        </div>
+
+
+
+        <div class="row mt-5">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                <div class="col-12 mb-4 mb-sm-4 mb-xl-4">
+                    <h6><span class="font-weight-bold forecast1">3 days</span> Forecast</h6>
+                </div>
+                <div class="container2 mb-5">
+                    <div class="row">
+
+                        <div class="col-12 card-general d-flex flex-row align-items-center">
+                            <div class="card3days-img ">
+                                <img id="imgForecastDia1" src="#" alt="">
+                            </div>
+                            <div class="card3days-pais">
+                                <h5 id="dayForecastDay11"></h5>
+                                <h6 id="dayForecastDay12"></h6>
+                            </div>
+                            <div class="card3days-temp">
+                                <h4 id="tempForecastDay1"></h4>
+                            </div>
+                        </div>
+
+                        <div class="col-12 card-general d-flex flex-row align-items-center">
+
+                            <div class="card3days-img ">
+                                <img id="imgForecastDia2" src="#" alt="">
+                            </div>
+                            <div class="card3days-pais">
+                                <h5 id="dayForecastDay21"></h5>
+                                <h6 id="dayForecastDay22"></h6>
+                            </div>
+                            <div class="card3days-temp2">
+                                <h4 id="tempForecastDay2"></h4>
+                            </div>
+                        </div>
+
+                        <div class="col-12 card-general d-flex flex-row align-items-center">
+                            <div class="card3days-img ">
+                                <img id="imgForecastDia3" src="#" alt="">
+                            </div>
+                            <div class="card3days-pais">
+                                <h5 id="dayForecastDay31"></h5>
+                                <h6 id="dayForecastDay32"></h6>
+                            </div>
+                            <div class="card3days-temp2">
+                                <h4 id="tempForecastDay3"></h4>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                <div class="col-12 mb-4 ">
+                    <h6><span class="font-weight-bold forecast1 ">Place to</span> Visit</h6>
+                </div>
+                <div class="container3">
+                    <div class="row ">
+
+                        <div class="col-12 p-5">
+
+                            <div class="d-flex icono">
+                                <h5><i class="bi bi-geo-alt-fill"></i></h5>
+                                <h5 class="line1"> Arab Street</h5>
+                            </div>
+                            <div class="d-flex">
+                                <h5 class="line2">Singapore</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-12 col-sm-12 col-md-6 mb-5 col-lg-6 col-xl-3">
+                <div class="col-12 d-flex mb-4 mt-5 mt-xl-0">
+                    <h4 class="font-weight-bold forecast2">+ Top Reviews</h4>
+                    <div class="">
+                        <img class="imgRev" src="./images/foto1.png" alt="">
+                    </div>
+                    <div class="">
+                        <img class="imgRev" src="./images/foto2.jpg" alt="">
+                    </div>
+                    <div class="">
+                        <img class="imgRev" src="./images/foto3.jpg" alt="">
+                    </div>
+                    <div class="imgRev">
+                        <p>0+</p>
+                    </div>
+                </div>
+                <div class="container3-1">
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col-12 p-3 conta3-bg1">
+                            <div class="d-flex icono">
+                                <h5><i class="bi bi-geo-alt-fill"></i></h5>
+                                <h5 class="line1"> Arab Street</h5>
+                            </div>
+                            <div class="d-flex">
+                                <h5 class="line2">Singapore</h5>
+                            </div>
+                        </div>
+
+                        <div class="col-12 conta3-bg2 d-flex justify-content-between">
+                            <div class="">
+                                <div class="d-flex icono mt-3">
+                                    <h5><i class="bi bi-geo-alt-fill mt-5"></i></h5>
+                                    <h5 class="line1"> Fountain</h5>
+                                </div>
+                                <div class="d-flex">
+                                    <h5 class="line2">Of death</h5>
+                                </div>
+                            </div>
+                            <div class="divRight">
+                                +
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 flotante">
+                <div class="container4">
+                    <div class="row ">
+
+                        <div class="col-11 col-sm-11 m-3 mt-xl-4 bg-light card-general2 d-flex flex-row">
+                            <div class=" container4-1">
+                                <div class="row row1Container4-1">
+                                    <div class="col-4 row1Container4-1-img">
+                                        <img id="mostrarImgLyon" class="container4taColRow1-img" src="#" alt="">
+                                    </div>
+                                    <div class="col-4 d-flex justify-content-center align-items-center ">
+                                        <h2 id="mostrarEdoTiempoLyon"></h2>
+                                        <h6 class="celcius2">°C</h6>
+                                    </div>
+
+                                    <div class="col-4 flex-column d-flex justify-content-center  ">
+                                        <h5 class="col3-1">Lyon</h2>
+                                            <h6 class="col3-2">Francia</h6>
+                                    </div>
+                                </div>
+
+                                <div class="row d-flex flex-row justify-content-center align-items-center mt-3">
+                                    <div class="col-5">
+                                        <p id="mostrarHumLyon" class="row1Container4-2"></p>
+                                    </div>
+                                    <div class="col-4">
+                                        <p class="row1Container4-2"> NorthWest</p>
+                                    </div>
+                                    <div class="col-3">
+                                        <p id="mostrarVelocidadLyon" class="row1Container4-2"></p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-11 col-sm-11 m-3 bg-light card-general2 d-flex flex-row">
+                            <div class=" container4-1">
+                                <div class="row row1Container4-1">
+                                    <div class="col-4 row1Container4-1-img">
+                                        <img id="mostrarImgParis" class="container4taColRow1-img" src="#" alt="">
+                                    </div>
+                                    <div class="col-4 d-flex justify-content-center align-items-center ">
+                                        <h2 id="mostrarEdoTiempoParis"></h2>
+                                        <h6 class="celcius2">°C</h6>
+                                    </div>
+
+                                    <div class="col-4 flex-column d-flex justify-content-center">
+                                        <h5 class="col3-1">Paris</h2>
+                                            <h6 class="col3-2">Francia</h6>
+                                    </div>
+                                </div>
+
+                                <div class="row d-flex flex-row justify-content-center align-items-center mt-3">
+                                    <div class="col-5">
+                                        <p id="mostrarHumParis" class="row1Container4-2"></p>
+                                    </div>
+                                    <div class="col-4">
+                                        <p class="row1Container4-2">West</p>
+                                    </div>
+                                    <div class="col-3">
+                                        <p id="mostrarVelocidadParis" class="row1Container4-2"></p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-11 col-sm-11 m-3 mb-5 card-general5 d-flex flex-row justify-content-center">
+                            <div class="container5">
+                                <div class="row d-flex flex-column">
+                                    <div class="col-12 justify-content-center align-items-center">
+                                        <h5>Add Locations</h5>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <img src="./images/tierra1.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+
+        </footer>
+    </div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+        integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
+        crossorigin="anonymous"></script>
+
+    <script>
+        window.onload = lanzadera();
+    </script>
+
+</body>
+
+</html>
