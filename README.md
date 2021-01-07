@@ -20,10 +20,10 @@ $ git clone https://github.com/clasesucatmarlon/gradiweb-test.git
 ## API de OpenWeather:
 Para el desarrollo de la aplicación se trabajó con la API proporcionada por OpenWeather.  Para ello se hizo uso de las siguientes rutas para extraer la información desde el archivo JSON de la misma.
 
-> __Url para la consulta actual del clima:__
+> __Url para la consulta actual del clima:__  
 > https://api.openweathermap.org/data/2.5/weather?id=${idCity}&appid=${apiKey}&units=metric
   
-> __Url para la consulta del clima para los tres dias siguientes:__
+> __Url para la consulta del clima para los tres dias siguientes:__  
 > http://api.openweathermap.org/data/2.5/forecast?id=${idCity}&appid=${apiKey}&units=metric
   
 
@@ -56,6 +56,6 @@ Para ejecutar la aplicación se debe abrir en el brwser de preferencia el archiv
      
  [Twitter](https://twitter.com/garciamarlon)
 
-## Contact0:
+## Contacto:
 
 Para contactarme escribir a: <clasesucatmarlon@gmail.com>.
