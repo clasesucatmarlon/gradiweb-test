@@ -15,14 +15,15 @@ Para clonar el repositorios, es necesario ejecutar lo siguiente:
 
 ```
 $ git clone https://github.com/clasesucatmarlon/gradiweb-test.git
+```
 
 ## API de OpenWeather:
 Para el desarrollo de la aplicación se trabajó con la API proporcionada por OpenWeather.  Para ello se hizo uso de las siguientes rutas para extraer la información desde el archivo JSON de la misma.
 
-> **Url para la consulta actual del clima:**
+> __Url para la consulta actual del clima:__
 > https://api.openweathermap.org/data/2.5/weather?id=${idCity}&appid=${apiKey}&units=metric
   
-  > **Url para la consulta del clima para los tres dias siguientes:**
+> __Url para la consulta del clima para los tres dias siguientes:__
 > http://api.openweathermap.org/data/2.5/forecast?id=${idCity}&appid=${apiKey}&units=metric
   
 
