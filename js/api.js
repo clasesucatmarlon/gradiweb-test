@@ -93,7 +93,7 @@ function obtenerDatosTempBannerParis(apiKey, idCity) {
 
 
 function obtenerDatosTempForecast1(apiKey, idCity) {
-    let url = `http://api.openweathermap.org/data/2.5/forecast?id=${idCity}&appid=${apiKey}&units=metric`;
+    let url = `https://api.openweathermap.org/data/2.5/forecast?id=${idCity}&appid=${apiKey}&units=metric`;
 
     const api = new XMLHttpRequest();
     api.open('GET', url, true);
@@ -133,7 +133,7 @@ function obtenerDatosTempForecast1(apiKey, idCity) {
 };
 
 function obtenerDatosTempForecast2(apiKey, idCity) {
-    let url = `http://api.openweathermap.org/data/2.5/forecast?id=${idCity}&appid=${apiKey}&units=metric`;
+    let url = `https://api.openweathermap.org/data/2.5/forecast?id=${idCity}&appid=${apiKey}&units=metric`;
 
     const api = new XMLHttpRequest();
     api.open('GET', url, true);
@@ -173,7 +173,7 @@ function obtenerDatosTempForecast2(apiKey, idCity) {
 };
 
 function obtenerDatosTempForecast3(apiKey, idCity) {
-    let url = `http://api.openweathermap.org/data/2.5/forecast?id=${idCity}&appid=${apiKey}&units=metric`;
+    let url = `https://api.openweathermap.org/data/2.5/forecast?id=${idCity}&appid=${apiKey}&units=metric`;
 
     const api = new XMLHttpRequest();
     api.open('GET', url, true);
